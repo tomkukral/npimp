@@ -1,3 +1,3 @@
-from .npimp import npimp
+from .npimp import main
 
-__all__ = ['npimp']
+__all__ = ['main']

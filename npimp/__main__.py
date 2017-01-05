@@ -1,3 +1,3 @@
-from .nmpimp import main
+from .npimp import main
 
 main()
