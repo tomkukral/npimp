@@ -1,7 +1,10 @@
 NTB Pimp
+---------
 
+.. image:: https://travis-ci.org/tomkukral/npimp.svg?branch=master
+       :target: https://travis-ci.org/tomkukral/npimp
 
-This module is able to regulate your notebook, check states and perform actions. There is this inifite loop:
+This module is able to regulate your notebook parameters, check states and perform actions. There is this inifite loop:
 
   - update info objects
   - run actions
