@@ -12,6 +12,7 @@ setup(
     author_email='tomas.kukral@6shore.net',
     license='MIT',
     url='https://github.com/tomkukral/npimp/',
+    download_url='https://github.com/tomkukral/npimp/archive/v0.4.tar.gz',
     packages=find_packages(),
     zip_safe=False,
     install_requires=[],
