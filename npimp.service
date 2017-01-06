@@ -1,0 +1,8 @@
+[Unit]
+Description=NTB pimp
+
+[Service]
+ExecStart=/usr/bin/npimp
+
+[Install]
+WantedBy=multi-user.target
