@@ -31,5 +31,3 @@ class Smapi(object):
                     setattr(self, filename, f.read().replace('\n', ''))
                 except FileNotFoundError:
                     raise
-
-        self.remaining_percent = 10

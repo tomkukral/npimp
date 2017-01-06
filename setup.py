@@ -6,14 +6,19 @@ with open('README') as f:
 
 setup(
     name='npimp',
-    version='0.1',
-    description='Regualate serveral notebook params',
+    version='0.3',
+    description='Notebook regulation daemon',
     long_description=long_description,
     author='Tomáš Kukrál',
     author_email='tomas.kukral@6shore.net',
     license='MIT',
     url='https://github.com/tomkukral/ntbpimp/',
     packages=find_packages(),
-    zip=False,
-    install_requires=['paho-mqtt']
+    zip_safe=False,
+    install_requires=[],
+    entry_points={
+        'console_scripts': [
+            'npimp = npimp:main',
+        ],
+    },
 )

@@ -45,8 +45,6 @@ def main():
         loop = asyncio.get_event_loop()
         loop.run_until_complete(asyncio.gather(*tasks))
 
-        print(tasks)
-
     init_objects()
     while True:
         update_info_objects()
