@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 
-import logging
-#import paho.mqtt.client as mqtt
-import asyncio
-from pprint import pprint
-import time
-
-from .info_modules import Smapi
 from .action_modules import Dumper, Charging
+from .info_modules import Smapi
+import asyncio
+import logging
+import time
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
