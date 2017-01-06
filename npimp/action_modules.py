@@ -2,7 +2,10 @@ from pprint import pprint
 import logging
 import asyncio
 
-from .config import stop_thresh_charging, stop_thresh_idle, thresh_file, charge_change
+from .config import stop_thresh_charging
+from .config import stop_thresh_idle
+from .config import thresh_file
+from .config import charge_change
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
