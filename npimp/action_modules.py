@@ -5,7 +5,7 @@ import asyncio
 from .config import stop_thresh_charging
 from .config import stop_thresh_idle
 from .config import thresh_file
-from .config import charge_change
+from .config import charge_start
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -54,13 +54,13 @@ class Charging(Action):
         logger.debug('state is ' + state)
 
         if state == 'charging-disabled':
-            if (int(self.smapi['remaining_percent']) <= charge_change and
+            if (int(self.smapi['remaining_percent']) <= charge_start and
                     int(self.smapi['stop_charge_thresh']) <= stop_thresh_charging):
                 self.set_state('charging-enabled')
                 logger.debug('Move to state charging-enabled')
 
         elif state == 'charging-enabled':
-            if self.smapi['state'] == 'idle':
+            if self.smapi['state'] in ['idle', 'discharging']:
                 self.set_state('charging-disabled')
                 logger.debug('Move to state charging-disabled')
 
