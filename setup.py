@@ -5,7 +5,7 @@ with open('README.rst') as f:
 
 setup(
     name='npimp',
-    version='0.4',
+    version='0.5',
     description='Notebook regulation daemon',
     long_description=long_description,
     author='Tomáš Kukrál',
