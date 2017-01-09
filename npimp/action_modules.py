@@ -1,4 +1,3 @@
-from pprint import pprint
 import logging
 import asyncio
 
@@ -21,8 +20,7 @@ class Action(object):
 
 class Dumper(Action):
     async def run(self, data):
-        await asyncio.sleep(0.2)
-        pprint(data)
+        logger.debug(data)
 
 
 class Charging(Action):
@@ -71,7 +69,6 @@ class Charging(Action):
         try:
             self.smapi = data['Smapi']
         except AttributeError:
-            print(data)
             raise
 
         try:
