@@ -1,5 +1,4 @@
 import logging
-import asyncio
 
 from .config import stop_thresh_charging
 from .config import stop_thresh_idle
